@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Testes JS</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+    <!--Chamada da função load para o comando onload-->
+    <body onload="load()">
+        
+        <!--Botão para testes da seção de botões do arquivo main.js-->
+        <button type="button" onclick="clicou()">Clique aqui</button>
+
+        <!--clicou()/redirecionar()/trocar() são todas chamadas de funções do main.js-->
+        <!--agradecimento/mousemove são id's para chamadas nas funções em main.js pelo getElementById-->
+        <p id="agradecimento" onclick="redirecionar()"></p>
+        <!--ao colocar o this na chamada da função, eu mostro para a função qual elemento ele deve trabalhar, podendo remover o id-->
+        <p id="mousemove" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+        <!--Exemplo sem o id-->
+        <p onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p>
+        <!--Exibe 3 valores no index e chama a função funcaoChange do main.js-->
+        <select onchange="funcaoChange(this)">
+            <option value="1">Valor 1</option>
+            <option value="2">Valor 2</option>
+            <option value="3">Valor3</option>
+
+        </select>
+    </body>
+</html>
